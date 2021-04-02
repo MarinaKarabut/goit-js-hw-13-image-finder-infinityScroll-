@@ -14,8 +14,6 @@ var debounce = require('lodash.debounce');
 
 const gallery = document.querySelector('.gallery')
 const searchField = document.querySelector('.search-field')
-const LoadMoreBtn = document.querySelector('.button')
-
 
 
 const apiService = new ApiService()
@@ -75,8 +73,6 @@ async function onLoadMore() {
     const result = await apiService.fetchArticles();
    
         renderMarkupPhotoCard(result);     
-    
-    
 }
 
 
